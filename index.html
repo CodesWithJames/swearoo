@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noodp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Discord.js addon!</title>
+  <meta name="description" content="Add Swearoo Module To Your Bot on Discord and give awesome perks to your bot!">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Swearoo.js">
+  <meta property="og:description" content="Add the swearoo.js module to your bot!">
+  <meta property="og:url" content="https://swearoo.glitch.me/">
+  <meta property="og:image" content="https://cdn.glitch.com/7946f7f1-36fe-4fc7-b587-6331f0a00b1a%2F6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_grande.png?v=1608369790150">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Swearoo.js">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="https://cdn.glitch.com/7946f7f1-36fe-4fc7-b587-6331f0a00b1a%2F6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_grande.png?v=1608369790150" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.com/7946f7f1-36fe-4fc7-b587-6331f0a00b1a%2F6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_grande.png?v=1608369790150">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.com/7946f7f1-36fe-4fc7-b587-6331f0a00b1a%2F6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_grande.png?v=1608369790150">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b3e3de">
+  <meta name="theme-color" content="#18191c">
+  <!-- Stylesheets -->
+  <link href="/assets/stylesheet/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+</head>
+<body>
+  <main id="top">
+    <div id="back-to-top" onMouseOver="showBTTToolbar()" onMouseOut="hideBTTToolbar()" hidden><span id="back-to-top-text" hidden>Back to top</span><a href="#top"><button class="black icon up"></button></a></div>
+    <header>
+      <div class="innerHeader">
+        <div class="headerLogo" onclick="updatePage(this.attributes['link-section'].value)" link-section="hero"></div>
+        <div class="menuIcon" onclick="toggleNav()"></div>
+        <nav hidden>
+          <div class="headerNav">
+            <ul class="mainNav">
+              <li><a onclick="updatePage(this.attributes['link-section'].value)" link-section="hero">Home</a></li>
+              <!-- <li><a onclick="updatePage(this.attributes['link-section'].value)" link-section="features">Features</a></li> -->
+              <li><a href="https://jamesmesserking.gitbook.io/" target="_blank">Guide</a></li>
+              <li><a href="https://discord.gg/6CQe26gm8A" target="_blank">Help &amp; Support</a></li>
+              <li onMouseOver="showInnerNav()" onMouseOut="hideInnerNav()">
+                <a class="headerNavMore">More&ensp;<img src="/assets/image/dropdown.svg" /></a>
+                <ul id="headerNavInner" class="innerNav">
+                  <!-- <li class="innerNavItem"><a onclick="updatePage(this.attributes['link-section'].value)" link-section="faq">FAQ</a></li> -->
+                  <li class="innerNavItem"><a onclick="updatePage(this.attributes['link-section'].value)" link-section="sponsors">Sponsors</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="headerNavRight">
+            <ul>
+              <li><a href="https://discord.gg/6CQe26gm8A" target="_blank">Join Discord</a></li>
+              <li><a class="button" onclick="updatePage(this.attributes['link-section'].value)" link-section="donate">Donate</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <container>
+      <section id="hero">
+        <!-- <svg class="hero-t" xmlns="http://www.w3.org/2000/svg" width="38" height="38">
+          <path fill="none" stroke="#FAFAFA" stroke-width="8" d="M4 34h29.72L19 4z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="hero-c" xmlns="http://www.w3.org/2000/svg" width="38" height="38">
+          <path fill="none" stroke="#FAFAFA" stroke-width="8" d="M19 4C10.729 4 4 10.729 4 19s6.729 15 15 15 15-6.729 15-15S27.271 4 19 4z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="hero-x" xmlns="http://www.w3.org/2000/svg" width="38" height="38">
+          <path fill="none" stroke="#FAFAFA" stroke-width="8" d="M34 4L4 33.8M4 4l30 29.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="hero-s" xmlns="http://www.w3.org/2000/svg" width="38" height="38">
+          <path fill="none" stroke="#FAFAFA" stroke-width="8" d="M4 34h30V4H4z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> -->
+        <div class="hero-container">
+          <h2 id="tagline">Give awesome perks to your Discord bot!</h2>
+          <a onclick="updatePage(this.attributes['link-section'].value)" link-section="add"><button class="primary" onMouseOver="taglineHighlight(1)" onmouseout="taglineHighlight(0)">Add swearoo.js to Discord bot!</button></a>
+          <a href="https://discord.gg/fzx8fkt" target="_blank"><button onMouseOver="taglineJoin()" onmouseout="taglineAdd()">Join our Discord server</button></a>
+        </div> <!-- .hero-container -->
+      </section> <!-- #hero -->
+
+  
+      <section id="sponsors" hidden>
+        <div class="header">
+          <h1>Sponsors</h1>
+          <p>These are the amazing companies and people who sponsor <strong>swearoo.js</strong> and keep us running.</p>
+        </div>
+        <div class="sponsors-container">
+          <div class="sponsor-section">
+            <a href="your-website.url.html" target="_blank">
+              <img src="https://static.wixstatic.com/media/7396cc_d41ffba4bbfc4b41a55a9425df3a7fd7~mv2.png/v1/fill/w_490,h_314,al_c,lg_1,q_85,usm_2.00_1.00_0.00/Your-Logo-here.webp" alt="" />
+              <p>Your description here.</p>
+              <button class="black icon next"></button>
+            </a>
+          </div>
+        </div> <!-- .sponsors-container -->
+      </section> <!-- #sponsors -->
+
+      <section id="add" hidden>
+        <div class="header">
+          <h1>Add Swearoo.js to your discord bot!</h1>
+          <p>Add Swearoo.js to your Discord bot, and give awesome perks to your Discord bot.</p>
+          <p>You can add this to your bot via npm or yarn!</p>
+        </div>
+        <div class="add-container">
+          <div class="add-section">
+            <a href="https://www.npmjs.com/package/swearoo.js" target="_blank">
+              <h4>Add the module!</h4>
+              <button class="black">Add to Bot&ensp;<img src="/assets/image/arrow_right.png" width="16" height="16" /></button>
+              <p>So add it to your bot via docs!</p>
+            </a>
+          </div>
+        </div> <!-- .sponsors-container -->
+      </section> <!-- #sponsors -->
+
+      <section id="donate" hidden>
+        <div class="header">
+          <h1>Donate to Swearoo.js Team</h1>
+          <p>Support the developement of Swearoo.js and keep it running forever by donating us.</p>
+        </div>
+        <div class="donate-container" style="text-align:center;">
+          <p>Your donations will ensure the development of <a href="https://www.npmjs.com/package/swearoo.js" target="_blank">swearoo.js</a> and I'll make sure this project stays active forever.</p>
+          <p>You can donate via <a href="https://www.patreon.com/bouat" target="_blank">Patreon</a> or <a href="https://paypal.me/jamesthecoder" target="_blank">PayPal</a>.</p>
+          <p>You get a special role in Our Discord Server and more perks are coming!</p>
+        </div> <!-- .sponsors-container -->
+      </section> <!-- #sponsors -->
+
+      <section id="e404" hidden>
+        <div class="e404-container">
+          <h2>You look lost my friend.</h2>
+          <p>Let's head back <a onclick="updatePage(this.attributes['link-section'].value)" link-section="hero">home</a>.</p>
+        </div> <!-- .sponsors-container -->
+      </section> <!-- #sponsors -->
+    </container>
+
+    <footer>
+      <svg id="footer-background" preserveAspectRatio="none" viewBox="0 0 1920 330" version="1.1">
+        <path fill="#202225" fill-opacity="0.3" d="M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z"></path>
+      </svg>
+      <div id="footer-content">
+        <div class="nav">
+          <div class="nav-section">
+            <p>Resources</p>
+            <a href="https://jamesmesserking.gitbook.io/" target="_blank">Documentation</a>
+            <a href="https://discord.gg/6CQe26gm8A" target="_blank">Help &amp; Support</a>
+            <!-- <a onclick="updatePage(this.attributes['link-section'].value)" link-section="faq">FAQ</a> -->
+          </div>
+
+          <div class="nav-section">
+            <p>Social</p>
+            <a href="https://discord.gg/6CQe26gm8A" target="_blank">Discord</a>
+            <a href="https://github.com/codeswithjames" target="_blank">GitHub</a>
+          </div>
+          <div class="nav-section">
+            <p>Donate</p>
+            <a href="https://paypal.me/jamesthecoder" target="_blank">PayPal</a>
+            <a href="https://www.patreon.com/bouat" target="_blank">Patreon</a>
+          </div>
+        </div>
+        <div id="footer-separator"></div>
+        <div class="meta">
+          <div class="copyright">
+            Copyright &copy; 2020-2020 - The Swearoo.js Project
+          </div>
+          <div class="links">
+            <a></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/showdown@1/dist/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/datatables.net@1/js/jquery.dataTables.min.js"></script>
+  <script src="/assets/javascript/main.js"></script>
+</body>
+</html>
